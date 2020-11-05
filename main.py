@@ -99,7 +99,7 @@ def main(args):
                 pass
 
             localtime = time.localtime()
-            times = args.time.split(":")
+            times = args.end_time.split(":")
             hr = int(times[0])
             minute = int(times[1])
             if localtime.tm_hour == hr and (localtime.tm_min < minute + 2 and localtime.tm_min > minute - 2):
