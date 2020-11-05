@@ -12,6 +12,7 @@ import time
 from datetime import datetime
 import schedule
 
+
 def leave(driver):
     # leave meeting
     btn = driver.find_element_by_xpath(
@@ -40,6 +41,7 @@ def main(args):
         ipdb.set_trace()
         pickle.dump(driver.get_cookies(), open("cookie.pkl", "wb"))
         driver.quit()
+        exit()
 
     else:
         url = args.url + "\#success"
@@ -117,12 +119,11 @@ if __name__ == "__main__":
     parser.add_argument('--cookies', type=bool, default=False)
     parser.add_argument('--url', type=str, default='https://zoom.us')
     parser.add_argument('--passcode', type=str, default='12345')
-    parser.add_argument('--start_time', type=str, default='04:29')
+    parser.add_argument('--start_time', type=str, default='06:00')
     parser.add_argument('--end_time', type=str, default='07:15')
     args = parser.parse_args()
 
-
-    schedule.every().day.at(args.start_time).do(main,args)
+    schedule.every().day.at(args.start_time).do(main, args)
 
     while True:
         schedule.run_pending()
