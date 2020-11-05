@@ -124,8 +124,12 @@ if __name__ == "__main__":
     parser.add_argument('--end_time', type=str, default='07:15')
     args = parser.parse_args()
 
-    schedule.every().day.at(args.start_time).do(main, args)
+    if args.cookies:
+        schedule.every().day.at(args.start_time).do(main, args)
 
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+
+    else:
+        main(args)
