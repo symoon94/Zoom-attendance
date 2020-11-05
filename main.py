@@ -18,7 +18,6 @@ def leave(driver):
     driver.execute_script("arguments[0].click();", btn)
     btn = driver.find_element_by_xpath(
         '//*[@id="wc-footer"]/div[2]/div[2]/div[3]/div/div/button')
-    # driver.execute_script("arguments[0].click();", btn)
     btn.click()
 
 
@@ -42,7 +41,9 @@ def main(args):
         exit()
 
     else:
-        url = args.url + "\#success"  # https://zoom.us/j/84649054166#success
+        url = args.url + "\#success"
+        passcode = args.passcode
+
         driver.get(url)
         cookies = pickle.load(open("cookie.pkl", "rb"))
         for cookie in cookies:
@@ -54,7 +55,7 @@ def main(args):
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, "inputpasscode"))
         )
-        driver.find_element_by_id("inputpasscode").send_keys("12345")
+        driver.find_element_by_id("inputpasscode").send_keys(passcode)
         driver.find_element_by_id("joinBtn").click()
         driver.implicitly_wait(10)
 
@@ -112,6 +113,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--cookies', type=bool, default=False)
     parser.add_argument('--url', type=str, default='https://zoom.us')
-    parser.add_argument('--time', type=str, default='3:12')
+    parser.add_argument('--passcode', type=str, default='12345')
+    parser.add_argument('--end_time', type=str, default='7:15')
     args = parser.parse_args()
     main(args)
