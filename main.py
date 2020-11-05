@@ -117,7 +117,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--cookies', type=bool, default=False)
+    parser.add_argument('--cookies', action='store_true')
     parser.add_argument('--url', type=str, default='https://zoom.us')
     parser.add_argument('--passcode', type=str, default='12345')
     parser.add_argument('--start_time', type=str, default='06:00')

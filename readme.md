@@ -6,13 +6,13 @@ I'm too lazy to wake up early in the morning to attend online classes. This prog
 
 To make a cookie that includes your login information such as id and password:
 
-    $ python main.py --cookies=False 
+    $ python main.py
 
 When it stops at the ipdb line, you have to manually login through the created window. Then, type "c" on your terminal to continue the program. It 
 
 To attend a class with the cookie file you saved:
 
-    $ python main.py --cookies=True --url=ZOOM_URL --passcode=ZOOM_PASSCODE --start_time=06:00 --end_time=7:15
+    $ python main.py --cookies --url=ZOOM_URL --passcode=ZOOM_PASSCODE --start_time=06:00 --end_time=7:15
 
 To see the argument options, run:
 
@@ -25,7 +25,7 @@ which will print:
 
     optional arguments:
     -h, --help            show this help message and exit
-    --cookies COOKIES
+    --cookies
     --url URL
     --passcode PASSCODE
     --start_time START_TIME
