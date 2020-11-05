@@ -36,11 +36,14 @@ def main(args):
 
     if args.cookies == False:
         driver.get("https://zoom.us")
-        # please login
+
+        # please sign in manually through the created window
         import ipdb
         ipdb.set_trace()
-        # if you are UofA student, type 'driver.get("https://arizona.zoom.us")' at the prompt.
-        # if you success to sign in the zoom,
+
+        # if you get an error message on the screen and you're an UofA student,
+        # please type 'driver.get("https://arizona.zoom.us")' at the prompt and sign in again.
+        # if you succeed in login,
         # then, type "c" at the promt to run the rest of the code below
         pickle.dump(driver.get_cookies(), open("cookie.pkl", "wb"))
         driver.quit()
