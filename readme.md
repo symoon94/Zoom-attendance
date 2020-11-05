@@ -1,6 +1,6 @@
 # Zoom-attendance
 
-I'm too lazy to wake up early in the morning to attend online classes.
+I'm too lazy to wake up early in the morning to attend online classes. This program can automatically start the zoom meeting at the specific time you set up, mute your mics, click any buttons popped up during the class, and leave the class when you want.
 
 ## Usage
 
