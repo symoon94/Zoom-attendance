@@ -12,7 +12,7 @@ When it stops at the ipdb line, you have to manually login through the window. T
 
 To attend a class with the cookie you saved:
 
-python main.py --cookies=True --url=ZOOM_URL --passcode=ZOOM_PASSCODE --end_time=7:15
+    $ python main.py --cookies=True --url=ZOOM_URL --passcode=ZOOM_PASSCODE --end_time=7:15
 
 To see the argument options, run:
 
