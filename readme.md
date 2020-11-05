@@ -11,9 +11,9 @@ To make a cookie that includes your login information such as id and password:
 When it stops at the ipdb line, you have to manually login through the created window. Then, type "c" on your terminal to continue the program. It 
 
 To attend a class with the cookie file you saved:
-
+```
     $ python main.py --cookies --url=ZOOM_URL --passcode=ZOOM_PASSCODE --start_time=START_TIME --end_time=END_TIME
-
+```
 To see the argument options, run:
 
     $ python main.py --help
@@ -35,9 +35,3 @@ which will print:
 ## Author
 
 Sooyoung Moon / [@symoon94](https://www.facebook.com/msy0128) 
-
-<style>
-code {
-  white-space : pre-wrap !important;
-}
-</style>
