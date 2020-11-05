@@ -35,3 +35,9 @@ which will print:
 ## Author
 
 Sooyoung Moon / [@symoon94](https://www.facebook.com/msy0128) 
+
+<style>
+code {
+  white-space : pre-wrap !important;
+}
+</style>
