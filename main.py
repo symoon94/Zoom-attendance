@@ -39,7 +39,9 @@ def main(args):
         # please login
         import ipdb
         ipdb.set_trace()
-        # type "c" at the promt to run the rest of the code below
+        # if you are UofA student, type 'driver.get("https://arizona.zoom.us")' at the prompt.
+        # if you success to sign in the zoom,
+        # then, type "c" at the promt to run the rest of the code below
         pickle.dump(driver.get_cookies(), open("cookie.pkl", "wb"))
         driver.quit()
         exit()
